@@ -1,4 +1,4 @@
-package code_wars.fourth_kyu;
+package code_wars.fourth_kyu.path_finder;
 
 import org.junit.Test;
 
