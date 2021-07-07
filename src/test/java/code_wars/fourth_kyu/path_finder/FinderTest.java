@@ -1,8 +1,8 @@
 package code_wars.fourth_kyu.path_finder;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FinderTest {
 
@@ -31,9 +31,9 @@ public class FinderTest {
                         ".....W\n"+
                         "....W.";
 
-        assertEquals(true,  Finder.pathFinder(a));
-        assertEquals(false, Finder.pathFinder(b));
-        assertEquals(true,  Finder.pathFinder(c));
-        assertEquals(false, Finder.pathFinder(d));
+        assertTrue(Finder.pathFinder(a));
+        assertFalse(Finder.pathFinder(b));
+        assertTrue(Finder.pathFinder(c));
+        assertFalse(Finder.pathFinder(d));
     }
 }

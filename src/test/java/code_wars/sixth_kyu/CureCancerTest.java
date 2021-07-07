@@ -1,10 +1,10 @@
 package code_wars.sixth_kyu;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CureCancerTest {
 
@@ -19,6 +19,7 @@ public class CureCancerTest {
         int[] answer = CureCancer.mutationLocation(body);
         assertEquals(Arrays.toString(new int[]{3,4}), Arrays.toString(answer));
     }
+
     @Test
     public void testSomething2() {
         char[][] body =  {
