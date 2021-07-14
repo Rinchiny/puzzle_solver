@@ -3,7 +3,7 @@ package dynamic_programming.lesson_one;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Memoization {
+public class FibonacciMemoization {
 
 
     public long naiveFibonacci(int n) {
@@ -18,4 +18,12 @@ public class Memoization {
         map.put(n, memoizationFibonacci(n-1, map) + memoizationFibonacci(n-2, map));
         return map.get(n);
     }
+
+    public long memoizationFibonacciWithArray(int n, Long[] array) {
+        if (n == 1 || n == 2) return 1;
+        if (array == null) array = new Long[n+1];
+        if (array[n] != null) return array[n];
+        array[n] = memoizationFibonacciWithArray(n-1, array) + memoizationFibonacciWithArray(n-2, array);
+        return array[n];
+     }
 }
