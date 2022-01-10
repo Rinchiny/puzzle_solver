@@ -29,7 +29,6 @@ public class TwoSum {
                 return new int[] { i, map.get(complement) };
             }
         }
-        // In case there is no solution, we'll just return null
         return null;
     }
 }
