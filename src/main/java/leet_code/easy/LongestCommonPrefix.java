@@ -2,6 +2,9 @@ package leet_code.easy;
 
 import java.util.Arrays;
 
+/**
+ * This class provides solution for a puzzle described <a href="https://leetcode.com/problems/longest-common-prefix/">here</a>
+ */
 public class LongestCommonPrefix {
 
     public String longestCommonPrefixNaive(String[] strs) {
