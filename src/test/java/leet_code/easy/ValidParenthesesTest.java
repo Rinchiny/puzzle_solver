@@ -10,9 +10,9 @@ class ValidParenthesesTest {
 
     @Test
     void isValid() {
-//        assertEquals(true, validParentheses.isValid("{}()[]"));
-//        assertEquals(true, validParentheses.isValid("{([])}"));
-//        assertEquals(false, validParentheses.isValid("{{]"));
-        assertEquals(false, validParentheses.isValid("()"));
+        assertTrue(validParentheses.isValid("{}()[]"));
+        assertTrue(validParentheses.isValid("{([])}"));
+        assertTrue(validParentheses.isValid("()"));
+        assertFalse(validParentheses.isValid("{{]"));
     }
 }
