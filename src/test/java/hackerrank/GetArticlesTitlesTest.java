@@ -1,4 +1,4 @@
-package hackerrun;
+package hackerrank;
 
 import org.junit.jupiter.api.Test;
 
