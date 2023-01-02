@@ -1,9 +1,7 @@
 package leet_code.easy;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Stream;
 
 /**
  * This class provides solution for a puzzle described <a href="https://leetcode.com/problems/happy-number/">here</a>

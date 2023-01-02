@@ -1,7 +1,5 @@
 package leet_code.easy;
 
-import java.util.TreeMap;
-
 /**
  * This class provides solution for a puzzle described <a href="https://leetcode.com/problems/merge-sorted-array/">here</a>
  */

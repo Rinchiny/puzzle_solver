@@ -1,9 +1,8 @@
 package leet_code.easy;
 
-import leet_code.common.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+import leet_code.common.TreeNode;
 
 /**
  * This class provides solution for a puzzle described <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">here</a>
