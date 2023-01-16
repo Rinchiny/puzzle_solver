@@ -7,16 +7,7 @@ import java.util.HashMap;
  */
 public class ValidAnagram {
 
-    public void a(int i) {
-        System.out.println("simple i");
-    }
-
-    public void a(int... i) {
-        System.out.println("multiple i");
-    }
-
-
-    public boolean isAnagram1(String s, String t) {
+    public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) return false;
 
         var map = new HashMap<Character, Integer>();

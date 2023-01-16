@@ -10,8 +10,6 @@ class ValidAnagramTest {
 
     @Test
     public void test() {
-        assertFalse(testSubject.isAnagram1("aacc", "ccac"));
-        testSubject.a(1);
+        assertFalse(testSubject.isAnagram("aacc", "ccac"));
     }
-
 }
