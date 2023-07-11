@@ -1,5 +1,6 @@
 package leet_code.easy;
 
+import java.util.HashSet;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -26,5 +27,14 @@ public class ContainsDuplicate {
         return IntStream.of(nums)
             .distinct()
             .count() != nums.length;
+    }
+
+    public boolean containsDuplicate3(int[] nums) {
+        var set = new HashSet<>(nums.length);
+        for (int num : nums) {
+            if (!set.add(num))
+                return true;
+        }
+        return false;
     }
 }
