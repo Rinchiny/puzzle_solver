@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * This class provides solution for a puzzle described <a href="https://leetcode.com/problems/lru-cache/">here</a>
  */
-class LRUCache extends LinkedHashMap<Integer, Integer> {
+public class LRUCache extends LinkedHashMap<Integer, Integer> {
 
     private final int capacity;
 
