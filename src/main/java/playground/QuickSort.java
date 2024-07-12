@@ -18,9 +18,8 @@ public class QuickSort {
     int pivot = getPivot(arr, high);
     int i = low - 1;
 
-    for (int j = low; j < high; j++) {
-      int current = arr[j];
-      if (current <= pivot) {
+    for (int j = low; j <= high; j++) {
+      if (arr[j] <= pivot) {
         i++;
         int temp = arr[i];
         arr[i] = arr[j];
@@ -28,10 +27,6 @@ public class QuickSort {
       }
     }
 
-    i++;
-    int temp = arr[i];
-    arr[i] = arr[high];
-    arr[high] = temp;
     return i;
   }
 

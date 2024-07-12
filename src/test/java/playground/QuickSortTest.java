@@ -16,6 +16,13 @@ class QuickSortTest {
   }
 
   @Test
+  public void testSort2() {
+    int[] arr = { 3, 3, 4, 5, 6, 4 };
+    testSubject.sort(arr);
+    assertArrayEquals(new int[] { 3, 3, 4, 4, 5, 6 }, arr);
+  }
+
+  @Test
   public void testSortOnAlreadySortedArray() {
     int[] arr = { 1, 2, 3, 4, 5, 6 };
     testSubject.sort(arr);
