@@ -17,9 +17,9 @@ class QuickSortTest {
 
   @Test
   public void testSort2() {
-    int[] arr = { 3, 3, 4, 5, 6, 4 };
+    int[] arr = { 7, 6, 4, 2, 3, 5 };
     testSubject.sort(arr);
-    assertArrayEquals(new int[] { 3, 3, 4, 4, 5, 6 }, arr);
+    assertArrayEquals(new int[] { 2, 3, 4, 5, 6, 7 }, arr);
   }
 
   @Test
