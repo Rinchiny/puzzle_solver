@@ -8,4 +8,3 @@ Packages:
 - `hackerrank` for puzzles from [Hackerrank](https://www.hackerrank.com/)
 - `leet_code` for puzzles from [LeetCode](https://leetcode.com/)
 - `playground` for having fun :).
-

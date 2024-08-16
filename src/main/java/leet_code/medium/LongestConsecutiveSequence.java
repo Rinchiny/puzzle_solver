@@ -1,7 +1,7 @@
 package leet_code.medium;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * This class provides solution for a puzzle described <a href="https://leetcode.com/problems/longest-consecutive-sequence/">here</a>
@@ -9,24 +9,21 @@ import java.util.stream.Collectors;
 public class LongestConsecutiveSequence {
 
     public int longestConsecutive(int[] nums) {
-        var set = Arrays.stream(nums).boxed().collect(Collectors.toSet());
-        var longest = 0;
-
-        for (var i : set) {
-            var beginningOfASequence = !set.contains(i - 1);
-            if (beginningOfASequence) {
-                var accum = 1;
-                var nextI = i+1;
-                while (set.contains(nextI)) {
-                    accum++;
-                    nextI++;
+        Set<Integer> numsSet = new HashSet<>();
+        for (int num : nums) {
+            numsSet.add(num);
+        }
+        int longestSequence = 0;
+        for (int num : nums) {
+            if (!numsSet.contains(num - 1)) {
+                int currentLength = 1;
+                while (numsSet.contains(num + currentLength)) {
+                    currentLength++;
                 }
-                if (longest < accum) {
-                    longest = accum;
-                }
+                longestSequence = Math.max(longestSequence, currentLength);
             }
         }
-        return longest;
+        return longestSequence;
     }
 
 }
