@@ -10,7 +10,7 @@ public class PlusOne {
     public int[] plusOneNaive(int[] digits) {
         var length = digits.length;
         var list = new LinkedList<Integer>();
-        for (int i = length -1; i >= 0; i--) {
+        for (int i = length - 1; i >= 0; i--) {
             var inc = ++digits[i];
             if (inc == 10) {
                 list.addFirst(0);
@@ -20,7 +20,7 @@ public class PlusOne {
                 }
             } else {
                 list.addFirst(inc);
-                for (int y = i-1; y >= 0; y--) {
+                for (int y = i - 1; y >= 0; y--) {
                     list.addFirst(digits[y]);
                 }
                 break;
@@ -30,21 +30,42 @@ public class PlusOne {
     }
 
     public int[] plusOneEnhanced(int[] digits) {
-        for (int i = digits.length -1; i >= 0; i--) {
+        for (int i = digits.length - 1; i >= 0; i--) {
             var inc = ++digits[i];
             if (inc == 10) {
                 digits[i] = 0;
                 if (i == 0) {
-                    var result = new int[digits.length+1];
+                    var result = new int[digits.length + 1];
                     result[0] = 1;
                     for (int y = 1; y < digits.length; y++) {
-                        result[y] = digits[y-1];
+                        result[y] = digits[y - 1];
                     }
                     return result;
                 }
             } else {
                 digits[i] = inc;
                 break;
+            }
+        }
+        return digits;
+    }
+
+    public int[] plusOneEnhancedEnhanced(int[] digits) {
+        int i = digits.length - 1;
+        while (i >= 0) {
+            var digit = digits[i];
+            if (digit < 9) {
+                digits[i] = digits[i] + 1;
+                return digits;
+            } else {
+                digits[i] = 0;
+                i--;
+            }
+            if (i < 0) {
+                int[] newArray = new int[digits.length + 1];
+                newArray[0] = 1;
+                System.arraycopy(digits, 0, newArray, 1, digits.length);
+                return newArray;
             }
         }
         return digits;
