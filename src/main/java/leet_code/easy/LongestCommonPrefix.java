@@ -1,26 +1,32 @@
 package leet_code.easy;
 
-import java.util.Arrays;
-
 /**
  * This class provides solution for a puzzle described <a href="https://leetcode.com/problems/longest-common-prefix/">here</a>
  */
 public class LongestCommonPrefix {
 
-    public String longestCommonPrefixNaive(String[] strs) {
-        var lengthOfShortestString = Arrays.stream(strs).map(String::length).sorted().findFirst().get();
-        if (lengthOfShortestString == 0) return "";
-        var accum = new StringBuilder();
-        outerloop:
-        for (int i = 0; i < lengthOfShortestString; i++) {
-            var ideal = strs[0].charAt(i);
-            for (String s : strs) {
-                if (s.charAt(i) != ideal) {
-                    break outerloop;
+    public String longestCommonPrefix(String[] strs) {
+        var index = 0;
+        var str1 = strs[0];
+        while (index < str1.length()) { //длиннее не будет, возможно будет короче
+            var same = true;
+            for (String str : strs) {
+                if (str.length() == index) {
+                    same = false;
+                    break;
+                }
+                if (str.charAt(index) != str1.charAt(index)) {
+                    same = false;
+                    break;
                 }
             }
-            accum.append(ideal);
+            if (same) {
+                index++;
+            } else {
+                break;
+            }
         }
-        return accum.length() == 0 ? "" : accum.toString();
+
+        return str1.substring(0, index);
     }
 }
